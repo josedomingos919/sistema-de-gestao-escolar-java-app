@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mycompany</groupId>
+    <artifactId>sistema-de-gestao-escolar-java-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <exec.mainClass>com.mycompany.sistema.de.gestao.escolar.java.app.SistemaDeGestaoEscolarJavaApp</exec.mainClass>
+    </properties>
+        <dependencies>
+          <!-- Hibernate (já traz o Jakarta Persistence) -->
+          <dependency>
+              <groupId>org.hibernate.orm</groupId>
+              <artifactId>hibernate-core</artifactId>
+              <version>6.4.4.Final</version>
+          </dependency>
+
+          <!-- MySQL driver (opcional se for usar MySQL) -->
+          <dependency>
+              <groupId>com.mysql</groupId>
+              <artifactId>mysql-connector-j</artifactId>
+              <version>8.3.0</version>
+          </dependency>
+    </dependencies>
+</project>
