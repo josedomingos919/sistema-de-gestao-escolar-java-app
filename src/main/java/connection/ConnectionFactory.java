@@ -13,7 +13,7 @@ import jakarta.persistence.Persistence;
  * @author User
  */
 public class ConnectionFactory {
-    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("locadoraPU");
+    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistenceUnitNameEstudante");
 
     public EntityManager getConnection(){
         return emf.createEntityManager();

@@ -34,6 +34,46 @@ public class Matricula {
     private int anoLectivo; 
    
     private int semestre;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Estudante getEstudante() {
+        return estudante;
+    }
+
+    public void setEstudante(Estudante estudante) {
+        this.estudante = estudante;
+    }
+
+    public Disciplina getDisciplina() {
+        return disciplina;
+    }
+
+    public void setDisciplina(Disciplina disciplina) {
+        this.disciplina = disciplina;
+    }
+
+    public int getAnoLectivo() {
+        return anoLectivo;
+    }
+
+    public void setAnoLectivo(int anoLectivo) {
+        this.anoLectivo = anoLectivo;
+    }
+
+    public int getSemestre() {
+        return semestre;
+    }
+
+    public void setSemestre(int semestre) {
+        this.semestre = semestre;
+    }
     
     
 }

@@ -12,19 +12,20 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import model.contracts.Pessoa;
-
+import dao.contracts.BaseEntity;
 /**
  *
  * @author User
  */
+
+
 @Entity
-public class Estudante extends Pessoa {
+public class Estudante extends Pessoa implements BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     
     private int idade;
-    private String genero;
     
     @Column(name = "numero_matricula")
     private int numeroMatricula;
@@ -36,7 +37,8 @@ public class Estudante extends Pessoa {
     @JoinColumn(name = "curso_id")
     private Curso curso;    
 
-    public int getId() {
+    @Override
+    public Integer getId() {
         return id;
     }
 
@@ -50,14 +52,6 @@ public class Estudante extends Pessoa {
 
     public void setIdade(int idade) {
         this.idade = idade;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
     }
 
     public int getNumeroMatricula() {

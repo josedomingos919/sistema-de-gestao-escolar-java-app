@@ -4,7 +4,10 @@
 
 package com.mycompany.sistema.de.gestao.escolar.java.app;
 
+import dao.EstudanteDAO;
+import java.util.List;
 import java.util.Scanner;
+import model.Estudante;
 
 /**
  *
@@ -34,6 +37,15 @@ public class SistemaDeGestaoEscolarJavaApp {
                case 1:
                    CursoUI.init();
                    break;
+               case 2: 
+                   EstudanteDAO estudanteDAO = new EstudanteDAO();
+                   List<Estudante> estudantes = estudanteDAO.findAll();
+        
+                    for (Estudante es : estudantes) {
+                        System.out.print("ID: " + es.getId() + "   ");
+                        System.out.println("Nome: " + es.getNome());
+                    }
+                 break;
            }
            
         } while(option != 0);

@@ -22,7 +22,15 @@ public class Curso {
  
     private String nome;
     private int duracao; // anos
-    private String grao; // Grau (Licenciatura, Mestrado, etc.)
+    private String grau; // Grau (Licenciatura, Mestrado, etc.)
+
+    public String getGrau() {
+        return grau;
+    }
+
+    public void setGrau(String grau) {
+        this.grau = grau;
+    }
 
     public Long getId() {
         return id;
@@ -48,12 +56,6 @@ public class Curso {
         this.duracao = duracao;
     }
 
-    public String getGrao() {
-        return grao;
-    }
 
-    public void setGrao(String grao) {
-        this.grao = grao;
-    }
 }
 

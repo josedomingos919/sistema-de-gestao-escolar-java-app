@@ -4,10 +4,13 @@
  */
 package model.contracts;
 
+import jakarta.persistence.MappedSuperclass;
+
 /**
  *
  * @author User
  */
+@MappedSuperclass // Serve para os atributos dessa classe serem reconheciodos nas entidades pelo Hibernete
 public abstract class Pessoa {
     protected String nome;
     protected String genero;
