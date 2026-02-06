@@ -5,15 +5,14 @@
 package dao;
 
 import dao.contracts.BaseRepository;
+import model.Curso;
 
 /**
  *
  * @author User
  */
-import model.Estudante;
-
-public class EstudanteDAO extends BaseRepository<Estudante> {
-    public EstudanteDAO(){
-        super(Estudante.class, "Estudante");
+public class CursoDAO extends BaseRepository<Curso> {
+    public CursoDAO(){
+        super(Curso.class, "Curso");
     }
 }

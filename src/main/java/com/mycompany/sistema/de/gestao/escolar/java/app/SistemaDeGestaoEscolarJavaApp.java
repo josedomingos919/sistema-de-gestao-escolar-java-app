@@ -22,6 +22,7 @@ public class SistemaDeGestaoEscolarJavaApp {
         System.out.println("=====================Menu Principal================");
         System.out.println("1- Curso");
         System.out.println("2- Estudante");
+        System.out.println("2- Disciplina");
         System.out.println("0- Sair");
         System.out.print("R: ");
     }
@@ -38,16 +39,9 @@ public class SistemaDeGestaoEscolarJavaApp {
                    CursoUI.init();
                    break;
                case 2: 
-                   EstudanteDAO estudanteDAO = new EstudanteDAO();
-                   List<Estudante> estudantes = estudanteDAO.findAll();
-        
-                    for (Estudante es : estudantes) {
-                        System.out.print("ID: " + es.getId() + "   ");
-                        System.out.println("Nome: " + es.getNome());
-                    }
+                   EstudanteUI.init();
                  break;
            }
-           
         } while(option != 0);
     }
 }

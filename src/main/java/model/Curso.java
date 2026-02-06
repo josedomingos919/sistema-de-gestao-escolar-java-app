@@ -8,17 +8,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+import dao.contracts.BaseEntity;
 /**
  *
  * @author User
  */
 @Entity
-public class Curso {
-    
+public class Curso implements BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
  
     private String nome;
     private int duracao; // anos
@@ -32,11 +31,11 @@ public class Curso {
         this.grau = grau;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

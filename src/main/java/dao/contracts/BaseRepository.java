@@ -12,8 +12,7 @@ import java.util.List;
  *
  * @author User
  */
-public abstract class BaseRepository<TEntity extends BaseEntity> implements IRepository<TEntity>{
-    
+public abstract class BaseRepository<TEntity extends BaseEntity> implements IRepository<TEntity>{   
     private Class<TEntity> entityClass;
     private String tableName = "";
 
@@ -44,7 +43,6 @@ public abstract class BaseRepository<TEntity extends BaseEntity> implements IRep
         return object1;
     }
     
-    // Teste
     public TEntity findById(int id) {
         EntityManager em = new ConnectionFactory().getConnection();
         TEntity object1 = null;
