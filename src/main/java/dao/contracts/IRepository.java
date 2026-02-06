@@ -11,7 +11,7 @@ import java.util.List;
  * @author User
  */
 public interface IRepository<TEntity> {
-    public TEntity save(TEntity entity);
+    public TEntity save(TEntity entity);// Update e Create
     public List<TEntity> findAll();
     public void delete(TEntity entity);
 }

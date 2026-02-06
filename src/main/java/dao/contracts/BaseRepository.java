@@ -29,9 +29,9 @@ public abstract class BaseRepository<TEntity extends BaseEntity> implements IRep
             em.getTransaction().begin();
             
             if(object1.getId() == null) {
-                em.persist(object1);
+                em.persist(object1); // Criar qual quer entidade: persist
             }else {
-                em.merge(object1);
+                em.merge(object1); // Atualizar qual quer entidade: merge
             }
             em.getTransaction().commit();
         }catch(Exception e){
@@ -44,6 +44,7 @@ public abstract class BaseRepository<TEntity extends BaseEntity> implements IRep
         return object1;
     }
     
+    // Teste
     public TEntity findById(int id) {
         EntityManager em = new ConnectionFactory().getConnection();
         TEntity object1 = null;
@@ -80,8 +81,8 @@ public abstract class BaseRepository<TEntity extends BaseEntity> implements IRep
         try {
             em.getTransaction().begin();
 
-            object1 = em.merge(object1); // garante que está gerenciada
-            em.remove(object1);
+            object1 = em.merge(object1); // garante que está gerenciada (existe esse dado)
+            em.remove(object1); // Remover
 
             em.getTransaction().commit();
         } catch (Exception e) {

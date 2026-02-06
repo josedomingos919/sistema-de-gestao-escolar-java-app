@@ -15,7 +15,7 @@ import model.contracts.Pessoa;
  * @author User
  */
 @Entity
-public class Professor extends Pessoa{
+public class Professor extends Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
