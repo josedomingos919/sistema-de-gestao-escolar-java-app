@@ -1,24 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.sistema.de.gestao.escolar.java.app;
 
-import dao.EstudanteDAO;
-import java.util.List;
 import java.util.Scanner;
-import model.Estudante;
+import model.Utilizador;
 
-/**
- *
- * @author User
- */
 public class SistemaDeGestaoEscolarJavaApp {
 
     private static int option = 0;
     private static Scanner scanner = new Scanner(System.in);
-    
-    private static void printOptions(){
+
+    private static void printOptions() {
         System.out.println("=====================Menu Principal================");
         System.out.println("1- Curso");
         System.out.println("2- Estudante");
@@ -31,37 +21,53 @@ public class SistemaDeGestaoEscolarJavaApp {
         System.out.println("0- Sair");
         System.out.print("R: ");
     }
-    
+
     public static void main(String[] args) {
         System.out.println("=====================Bem-Vindo================");
-        
+
+        // Login antes de mostrar menu
+        Utilizador logado = null;
         do {
-           printOptions();
-           option = scanner.nextInt();
-           
-           switch(option) {
-               case 1:
-                   CursoUI.init();
-                break;
-               case 2: 
-                   EstudanteUI.init();
-                break;
-               case 3: 
-                   DisciplinaUI.init();
-                break;
-               case 4: 
-                   ProfessorUI.init();
-                break;
-               case 6: 
-                   AvaliacaoUI.init();
-                break;
-                case 7: 
-                   MatriculaUI.init();
-                break;
-                case 8: 
-                   RelatorioUI.init();
-                break;
-           }
-        } while(option != 0);
+            logado = LoginUI.login();
+        } while (logado == null);
+
+        // Após login, mostrar menu
+        do {
+            printOptions();
+            option = scanner.nextInt();
+            scanner.nextLine(); // limpar buffer
+
+            switch (option) {
+                case 1:
+                    CursoUI.init();
+                    break;
+                case 2:
+                    EstudanteUI.init();
+                    break;
+                case 3:
+                    DisciplinaUI.init();
+                    break;
+                case 4:
+                    ProfessorUI.init();
+                    break;
+                case 5:
+                    UtilizadorUI.init();
+                    break;
+                case 6:
+                    AvaliacaoUI.init();
+                    break;
+                case 7:
+                    MatriculaUI.init();
+                    break;
+                case 8:
+                    RelatorioUI.init();
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        } while (option != 0);
     }
 }
