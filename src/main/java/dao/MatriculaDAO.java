@@ -4,10 +4,15 @@
  */
 package dao;
 
+import dao.contracts.BaseRepository;
+import model.Matricula;
+
 /**
  *
  * @author User
  */
-public class MatriculaDAO {
-    
+public class MatriculaDAO extends BaseRepository<Matricula> {
+    public MatriculaDAO(){
+        super(Matricula.class, "Matricula");
+    }
 }

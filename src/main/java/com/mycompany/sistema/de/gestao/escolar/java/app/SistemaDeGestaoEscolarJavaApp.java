@@ -51,6 +51,12 @@ public class SistemaDeGestaoEscolarJavaApp {
                case 4: 
                    ProfessorUI.init();
                 break;
+               case 6: 
+                   AvaliacaoUI.init();
+                break;
+                case 7: 
+                   MatriculaUI.init();
+                break;
            }
         } while(option != 0);
     }
