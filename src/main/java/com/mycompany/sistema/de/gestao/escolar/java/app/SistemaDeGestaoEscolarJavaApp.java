@@ -27,6 +27,7 @@ public class SistemaDeGestaoEscolarJavaApp {
         System.out.println("5- Utilizador");
         System.out.println("6- Avaliacao");
         System.out.println("7- Matricula");
+        System.out.println("8- Relatório");
         System.out.println("0- Sair");
         System.out.print("R: ");
     }
@@ -56,6 +57,9 @@ public class SistemaDeGestaoEscolarJavaApp {
                 break;
                 case 7: 
                    MatriculaUI.init();
+                break;
+                case 8: 
+                   RelatorioUI.init();
                 break;
            }
         } while(option != 0);
