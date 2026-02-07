@@ -24,7 +24,6 @@ public class EstudanteUI {
         System.out.print("R: ");
     }
 
-    // 🔥 Escolher curso (IMPORTANTE para evitar erro de FK)
     private static Curso escolherCurso() {
 
         List<Curso> cursos = cursoDAO.findAll();

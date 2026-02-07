@@ -4,6 +4,7 @@
  */
 package model;
 
+import dao.contracts.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,7 +18,7 @@ import jakarta.persistence.ManyToOne;
  * @author User
  */
 @Entity
-public class Matricula {
+public class Matricula implements BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -35,7 +36,7 @@ public class Matricula {
    
     private int semestre;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

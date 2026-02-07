@@ -22,7 +22,11 @@ public class SistemaDeGestaoEscolarJavaApp {
         System.out.println("=====================Menu Principal================");
         System.out.println("1- Curso");
         System.out.println("2- Estudante");
-        System.out.println("2- Disciplina");
+        System.out.println("3- Disciplina");
+        System.out.println("4- Professor");
+        System.out.println("5- Utilizador");
+        System.out.println("6- Avaliacao");
+        System.out.println("7- Matricula");
         System.out.println("0- Sair");
         System.out.print("R: ");
     }
@@ -37,10 +41,16 @@ public class SistemaDeGestaoEscolarJavaApp {
            switch(option) {
                case 1:
                    CursoUI.init();
-                   break;
+                break;
                case 2: 
                    EstudanteUI.init();
-                 break;
+                break;
+               case 3: 
+                   DisciplinaUI.init();
+                break;
+               case 4: 
+                   ProfessorUI.init();
+                break;
            }
         } while(option != 0);
     }

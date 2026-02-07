@@ -4,6 +4,7 @@
  */
 package model;
 
+import dao.contracts.BaseEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,11 +18,11 @@ import jakarta.persistence.ManyToOne;
  * @author User
  */
 @Entity
-public class Avaliacao {
+public class Avaliacao implements BaseEntity{
         
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     
     @ManyToOne
     @JoinColumn(name = "matricula_id")
@@ -32,11 +33,11 @@ public class Avaliacao {
     
     private int nota;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

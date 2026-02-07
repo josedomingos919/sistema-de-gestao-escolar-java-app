@@ -4,6 +4,7 @@
  */
 package model;
 
+import dao.contracts.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,12 +16,12 @@ import model.contracts.Pessoa;
  * @author User
  */
 @Entity
-public class Professor extends Pessoa {
+public class Professor extends Pessoa implements BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
