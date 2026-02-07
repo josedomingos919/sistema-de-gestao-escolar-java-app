@@ -1,5 +1,6 @@
 package com.mycompany.sistema.de.gestao.escolar.java.app;
 
+import storage.SessaoUtilizador;
 import java.util.List;
 import java.util.Scanner;
 

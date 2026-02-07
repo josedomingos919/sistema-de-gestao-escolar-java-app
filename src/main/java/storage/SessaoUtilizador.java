@@ -1,4 +1,4 @@
-package com.mycompany.sistema.de.gestao.escolar.java.app;
+package storage;
 
 import model.Utilizador;
 
