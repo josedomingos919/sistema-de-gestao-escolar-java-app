@@ -10,7 +10,7 @@ public class LoginUI {
 
     private static Scanner scanner = new Scanner(System.in);
     private static UtilizadorDAO utilizadorDAO = new UtilizadorDAO();
-
+ 
     public static Utilizador login() {
         System.out.println("===== LOGIN =====");
 
@@ -20,12 +20,18 @@ public class LoginUI {
         System.out.print("Senha: ");
         String senha = scanner.nextLine();
 
-        // Buscar todos os utilizadores e validar
         List<Utilizador> todos = utilizadorDAO.findAll();
+
         for (Utilizador u : todos) {
             if (u.getUsername().equals(username) && u.getSenha().equals(senha)) {
-                System.out.println("Login efetuado com sucesso! Perfil: " + u.getPerfil());
-                return u; // retorna o utilizador logado
+
+                SessaoUtilizador.setUtilizador(u); // ⭐ AQUI
+
+                System.out.println("Login efetuado com sucesso!");
+                System.out.println("Bem-vindo " + u.getUsername());
+                System.out.println("Perfil: " + u.getPerfil());
+
+                return u;
             }
         }
 
